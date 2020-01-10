@@ -17,7 +17,7 @@ weatherForm.addEventListener('submit', (event) => {
                 message2.textContent = data.error;
             } else {
                 message1.textContent = data.location;
-                message2.textContent = `It is currently ${data.forecast.summary} The current temparature is ${data.forecast.currentTemperature} and there is a ${data.forecast.currentPrecipProbability}% chance of rain.`;
+                message2.textContent = data.forecast;
             }
         });
     }).catch((err) => {
